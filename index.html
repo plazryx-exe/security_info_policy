@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ORION | Terms of Service &amp; Privacy Policy</title>
+<meta name="description" content="Terms of Service and Privacy Policy for ORION, an AI messaging automation assistant.">
+<style>
+:root{--bg:#04070d;--panel:#0a111c;--line:#15324a;--fg:#d3e6f7;--mut:#7d93aa;--cy:#19e3ff;--gr:#6dff9c;--r:6px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+canvas{position:fixed;inset:0;z-index:-2;opacity:.35}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(900px 500px at 15% -10%,#0b3a5a55,transparent),repeating-linear-gradient(0deg,#ffffff06 0 1px,transparent 1px 3px);pointer-events:none}
+.mono{font-family:ui-monospace,"JetBrains Mono",Consolas,monospace}
+nav{position:sticky;top:0;z-index:5;display:flex;gap:8px;align-items:center;padding:12px clamp(14px,4vw,40px);background:#04070dd9;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.logo{font-weight:700;letter-spacing:.18em;color:var(--cy);margin-right:auto;text-shadow:0 0 12px #19e3ff88}
+nav a{color:var(--mut);text-decoration:none;padding:6px 14px;border:1px solid transparent;border-radius:var(--r);font-size:14px}
+nav a:hover,nav a:focus-visible{color:var(--fg);border-color:var(--line);outline:none}
+nav a.on{color:var(--cy);border-color:var(--cy);box-shadow:0 0 14px #19e3ff33 inset}
+.wrap{max-width:1100px;margin:0 auto;padding:40px clamp(14px,4vw,40px) 80px}
+.hero{padding:34px 0 28px;border-bottom:1px dashed var(--line);margin-bottom:32px}
+.term{color:var(--gr);font-size:14px;min-height:22px}
+.term::after{content:"\2588";margin-left:3px;animation:b 1s steps(2) infinite}
+@keyframes b{50%{opacity:0}}
+h1{font-size:clamp(30px,6vw,56px);line-height:1.1;margin:10px 0;letter-spacing:-.02em;text-shadow:0 0 28px #19e3ff44}
+.sub{color:var(--mut);max-width:62ch;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;font-size:13px}
+.meta span{border:1px solid var(--line);background:var(--panel);padding:3px 10px;border-radius:99px;color:var(--mut)}
+.meta b{color:var(--gr);font-weight:600}
+.grid{display:grid;grid-template-columns:230px 1fr;gap:36px;align-items:start}
+aside{position:sticky;top:84px;font-size:14px}
+aside button{display:block;width:100%;text-align:left;background:none;border:0;border-left:2px solid var(--line);color:var(--mut);padding:5px 12px;cursor:pointer;font:inherit}
+aside button:hover,aside button:focus-visible,aside button.on{color:var(--cy);border-left-color:var(--cy);outline:none}
+section.s{background:linear-gradient(180deg,var(--panel),#080e17);border:1px solid var(--line);border-left:3px solid var(--cy);border-radius:var(--r);padding:20px 24px;margin-bottom:16px}
+section.s h2{margin:0 0 8px;font-size:19px;color:#fff}
+section.s h2 i{font-style:normal;color:var(--gr);margin-right:8px}
+section.s p{margin:8px 0;max-width:75ch}ul{padding-left:20px;margin:8px 0}li{margin:4px 0;max-width:75ch}
+a{color:var(--cy)}
+.note{border:1px solid #6dff9c55;background:#6dff9c0d;border-radius:var(--r);padding:14px 18px;margin-bottom:16px;font-size:15px}
+footer{border-top:1px solid var(--line);padding:22px;text-align:center;color:var(--mut);font-size:13px}
+@media(max-width:820px){.grid{grid-template-columns:1fr}aside{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.term::after{animation:none}}
+</style></head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<nav><span class="logo mono">ORION</span>
+<a href="#/terms" id="n-terms">Terms of Service</a><a href="#/privacy" id="n-privacy">Privacy Policy</a></nav>
+<div class="wrap"><div class="hero">
+<div class="term mono" id="term"></div><h1 id="h1"></h1><p class="sub" id="sub"></p><div class="meta mono" id="meta"></div></div>
+<div class="grid"><aside id="toc" aria-label="Sections"></aside><main id="app"></main></div></div>
+<footer class="mono">&copy; 2026 Aditya Raj Sharma &middot; ORION &middot; Governed by the laws of India</footer>
+<script>
+const EM="mr.sharmag.personal@gmail.com",M=`<a href="mailto:${EM}">${EM}</a>`,DATE="2 October 2026";
+const D={
+terms:{file:"terms_of_service.md",t:"Terms of Service",s:"The rules for using ORION, the AI assistant that reads and replies to your messages across the platforms you connect.",secs:[
+["Agreement and operator",`These Terms are a binding agreement between you and Aditya Raj Sharma, an individual based in India ("Operator", "we"). By signing in with Discord, connecting a platform, or otherwise using ORION, you accept these Terms and our <a href="#/privacy">Privacy Policy</a>. If you do not accept them, do not use ORION.`],
+["What ORION does",`ORION is an AI-powered assistant that connects to messaging and social platforms you choose, reads incoming messages, drafts or sends replies where you allow it, and notifies you when it is unsure or when a message should be forwarded to you.`,["Discord is the first supported platform.","WhatsApp, Instagram and Telegram are planned and may be added later. Until announced, they are not available.","ORION is currently built and run for its Operator. Access for other people may open gradually, and features may change, pause or end at any time."]],
+["Accounts and Discord sign-in",`ORION uses Discord OAuth2 to identify you. We request only the permissions shown on Discord's consent screen (for example <span class="mono">identify</span>, and <span class="mono">email</span> if enabled). You can revoke access at any time in Discord under Settings &rarr; Authorized Apps. Keep your devices and any tokens you provide secure; you are responsible for activity under your account.`],
+["Your responsibilities",`You confirm that:`,["You own or are authorised to control every account you connect.","You will follow the terms and policies of each connected platform (Discord, Meta, WhatsApp, Instagram, Telegram and others).","You have the right to process the messages and contact details ORION handles, and will inform or obtain consent from other people where the law requires.","You meet the minimum age that applies to you under the law and under the rules of each platform you connect. If you are a minor under the law where you live, a parent or guardian must agree to these Terms for you."]],
+["Automation and AI output",`ORION uses AI models, which can be wrong, incomplete or inappropriate. You are responsible for every message sent from your accounts, whether you wrote it or ORION did. Review drafts, use approval settings, and do not rely on ORION for legal, medical, financial or emergency communication. Alerts and forwarding are best-effort and not guaranteed to be timely or complete.`],
+["Prohibited use",`You must not use ORION to:`,["Send spam, scams, bulk unsolicited messages, harassment, hate or threats.","Impersonate someone, deceive people about who they are talking to where the law or platform rules require disclosure, or break the law.","Access accounts, messages or data you are not authorised to access.","Evade platform limits or bans, or break platform rules, including automating accounts in ways a platform forbids.","Probe, attack, overload, reverse engineer or disrupt ORION or its infrastructure, or use it to build malware.","Use the output to train competing AI models or resell ORION without written permission."]],
+["Third-party platforms",`ORION is independent and is not affiliated with or endorsed by Discord, Meta, WhatsApp, Instagram or Telegram. Those services have their own terms and may limit, suspend or ban accounts that use automation. You accept that risk. We are not responsible for actions taken by third-party platforms or for changes to their APIs.`],
+["Privacy and data",`How we handle personal information is explained in the <a href="#/privacy">Privacy Policy</a>, which forms part of these Terms.`],
+["Intellectual property",`ORION's software, design and branding belong to the Operator. You keep ownership of your own messages and content, and give ORION permission to process them only as needed to provide the service you request.`],
+["Disclaimers",`ORION is provided "as is" and "as available", without warranties of any kind, to the maximum extent permitted by law. We do not promise uninterrupted, secure or error-free operation, or that any platform integration will keep working.`],
+["Limitation of liability",`To the maximum extent permitted by law, the Operator is not liable for indirect, incidental or consequential loss, lost data, lost profits, account bans, or reputational harm arising from your use of ORION. Where liability cannot be excluded, it is limited to the amount you paid us for ORION in the 12 months before the claim (or INR 1,000 if you paid nothing). Nothing here limits liability that cannot be limited under applicable law.`],
+["Suspension and termination",`You may stop using ORION and revoke access at any time. We may suspend or end access if you break these Terms, create risk for others or for the service, or if we must do so by law or because a platform requires it.`],
+["Changes",`We may update these Terms as ORION grows, including when new platforms or hosted features launch. The date above will change, and material changes will be notified in a suitable way. Continued use after an update means you accept it.`],
+["Governing law and contact",`These Terms are governed by the laws of India, including the Information Technology Act, 2000 and the Indian Contract Act, 1872. Courts of competent jurisdiction in India have jurisdiction over disputes, subject to any mandatory rights you have under local law. Questions, complaints or grievances: ${M}.`]
+]},
+privacy:{file:"privacy_policy.md",t:"Privacy Policy",s:"What ORION collects, why it collects it, where it lives, and the control you have over it.",secs:[
+["Who we are",`The data fiduciary / controller is Aditya Raj Sharma, based in India. Contact and grievance officer: ${M}. This Policy covers ORION and this website. Platforms you connect (Discord, WhatsApp, Instagram, Telegram) and any AI providers you configure have their own privacy practices.`],
+["Where ORION stands today",`ORION currently runs local-first: its data is kept in a local database and chat requests go to an AI model (Ollama) running on the same computer, not to a cloud AI service. A hosted multi-user version may follow. If it does, we will update this Policy and obtain any required consent before the new processing begins.`],
+["Information we process",``,["<b>Discord sign-in:</b> your Discord user ID, username, avatar and, if you grant the email scope, your email address, plus the access token Discord issues.","<b>Connected platform content:</b> messages, sender and contact details, drafts, review status and forwarding alerts from platforms you connect.","<b>Chat and AI data:</b> your chat messages, generated replies, and personal facts or preferences you save, including which ones may be used in reply drafts.","<b>Settings and activity:</b> connection settings, model choices, and local usage statistics.","<b>Website logs:</b> this legal site is served by Cloudflare, which may process IP address and request data to deliver and protect it. We do not add analytics or advertising trackers."]],
+["Why we use it",``,["To authenticate you and keep your workspace.","To read messages, prepare drafts or replies, and alert you when something needs your attention.","To personalise replies using only information you have approved for that purpose.","To secure, debug and improve ORION, and to meet legal obligations."]],
+["AI processing",`Prompts, recent context and the information you approved are passed to the AI model you configure. Today that model runs on your own machine. If a cloud AI provider is ever added, we will name it here first. We do not sell personal data, and we do not use Discord or other platform data to train AI or machine learning models.`],
+["Sharing",`We do not sell or rent personal information. Data is shared only: with platforms you connect, as needed to read and send your messages; with infrastructure providers such as Cloudflare for this website, and any hosting provider of a future hosted version; when you share a draft that reveals approved information; or when required by law or to protect rights and safety.`],
+["Other people's messages",`When you connect a platform, ORION processes messages from people who wrote to you. You are responsible for having a lawful basis to process them. ORION uses that content only to serve you, and does not build profiles of those contacts for any other purpose.`],
+["Storage, retention and deletion",`Data stays until you change or delete it. Today it is held in an unencrypted local SQLite database and your browser storage. You can edit saved information in the app, revoke ORION in Discord (Settings &rarr; Authorized Apps) to cut off sign-in, and ask us to delete your data by emailing ${M}. We may need to keep limited records where the law requires, and deleted data can persist in backups you control. The current interface does not yet offer one-click deletion of every record.`],
+["Security",`We limit what we collect and keep tokens separate from chat content. No system is perfectly secure. The current build is intended for local use and lacks production-grade authentication, and the database is not encrypted by ORION. Use device passwords, disk encryption and updates, and never email us passwords or tokens.`],
+["Your rights",`Under India's Digital Personal Data Protection Act, 2023, and other laws that apply to you (such as the GDPR where relevant), you may have rights to access, correct, erase, withdraw consent, nominate a representative, and complain about how your data is handled. Email ${M} and we will respond within a reasonable time and in line with applicable law. You may also contact the relevant data protection authority.`],
+["Children",`ORION has no fixed minimum age of its own, but platforms like Discord have theirs and you must respect them. Where the law treats a user as a child, we process their data only with verifiable parental or guardian consent, and we do not track, profile or target children with advertising. If you believe a child's data was provided without consent, contact us and we will act promptly.`],
+["Changes and contact",`We will update this Policy when our practices change and show the new date above. Questions or complaints: ${M}.`]
+]}};
+const $=i=>document.getElementById(i);let tm;
+function type(el,txt){clearTimeout(tm);el.textContent="";let i=0;if(matchMedia("(prefers-reduced-motion:reduce)").matches){el.textContent=txt;return}(function f(){el.textContent=txt.slice(0,++i);if(i<txt.length)tm=setTimeout(f,28)})()}
+function render(){
+ const k=location.hash.includes("privacy")?"privacy":"terms",d=D[k];
+ document.title=`ORION | ${d.t}`;
+ $("n-terms").className=k=="terms"?"on":"";$("n-privacy").className=k=="privacy"?"on":"";
+ type($("term"),`> cat ${d.file} --verify`);
+ $("h1").textContent=d.t;$("sub").textContent=d.s;
+ $("meta").innerHTML=`<span>effective <b>${DATE}</b></span><span>operator <b>Aditya Raj Sharma</b></span><span>jurisdiction <b>India</b></span>`;
+ let h=k=="privacy"?`<div class="note">Short version: ORION reads your messages only on platforms you connect, replies only as you allow, never sells your data, and today keeps everything on your own machine.</div>`:`<div class="note">Short version: you stay responsible for your accounts and messages. ORION is an assistant, its AI can be wrong, and platforms may restrict automation.</div>`;
+ d.secs.forEach((s,i)=>{h+=`<section class="s" id="s${i}"><h2><i class="mono">&gt;</i>${s[0]}</h2>`;
+  s.slice(1).forEach(b=>{h+=Array.isArray(b)?`<ul>${b.map(x=>`<li>${x}</li>`).join("")}</ul>`:(b?`<p>${b}</p>`:"")});h+=`</section>`});
+ $("app").innerHTML=h;
+ $("toc").innerHTML=d.secs.map((s,i)=>`<button data-i="${i}">${s[0]}</button>`).join("");
+ $("toc").querySelectorAll("button").forEach(b=>b.onclick=()=>$("s"+b.dataset.i).scrollIntoView());
+ scrollTo(0,0);
+}
+addEventListener("hashchange",render);render();
+/* scroll-spy */
+addEventListener("scroll",()=>{const ss=[...document.querySelectorAll("section.s")];let c=0;ss.forEach((s,i)=>{if(s.getBoundingClientRect().top<140)c=i});
+ document.querySelectorAll("#toc button").forEach((b,i)=>b.classList.toggle("on",i==c))},{passive:true});
+/* binary rain */
+(function(){const c=$("bg"),x=c.getContext("2d");if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+ let w,h,cols,y;function sz(){w=c.width=innerWidth;h=c.height=innerHeight;cols=Math.ceil(w/18);y=Array.from({length:cols},()=>Math.random()*h/18)}sz();addEventListener("resize",sz);
+ setInterval(()=>{x.fillStyle="rgba(4,7,13,.12)";x.fillRect(0,0,w,h);x.font="14px monospace";
+  for(let i=0;i<cols;i++){x.fillStyle=Math.random()>.97?"#6dff9c":"#19e3ff";x.fillText(Math.random()>.5?"1":"0",i*18,y[i]*18);if(y[i]*18>h&&Math.random()>.975)y[i]=0;y[i]++}},70)})();
+</script></body></html>
